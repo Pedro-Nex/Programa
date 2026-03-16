@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Conversor {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         final double DOLAR = 5.10;
         final double EURO = 6.10;
@@ -15,10 +15,10 @@ public class Conversor {
         System.out.println("*** Bem vindo ao Conversor de Moedas ***");
 
         System.out.print("Digite o seu nome: ");
-        String nome = scanner.nextLine();
+        String nome = scan.nextLine();
         System.out.print("Digite a sua idade: ");
-        int idade = scanner.nextInt();
-        scanner.nextLine();
+        int idade = scan.nextInt();
+        scan.nextLine();
 
         if (idade < 18) {
             System.out.println(nome + ", você não pode converter moedas.");
@@ -26,11 +26,11 @@ public class Conversor {
         }
 
         System.out.print(nome + ", digite a quantidade de reais que você deseja converter: ");
-        double valor = scanner.nextDouble();
-        scanner.nextLine();
+        double valor = scan.nextDouble();
+        scan.nextLine();
 
         System.out.print(nome + ", digite a moeda para a qual você deseja converter: ");
-        String moeda = scanner.nextLine();
+        String moeda = scan.nextLine();
 
         if (moeda.equalsIgnoreCase("DOLAR")) {
             double valorConvertido = valor / DOLAR;
@@ -60,6 +60,6 @@ public class Conversor {
             System.out.println("Moeda inválida");
         }
 
-        scanner.close();
+        scan.close();
     }
 }
